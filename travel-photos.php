@@ -83,7 +83,16 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
     	echo "<div class='paginationholder'><div class='prevholder'>&nbsp;</div><div class='pageholder'>Page <b>" . $currentpage . "</b> of " . $totalPages . "</div>" . PHP_EOL;
       echo "<div class='nextholder'><a href='". $nexturl .="page=" . $nex . "' style='margin-left:20px;'>Next</a></div></div>" . PHP_EOL;
     } 
-	/************* END PAGINATION SCRIPT ***************/
+    /* begin script */
+    echo "<div style='width:275px; margin:0 auto;'><ul style='list-style:none; display:inline;'>";
+    // simultaneous loop through two variables
+    for ($i = 1, $foolink = 0; $i < $totalPages + 1, $foolink <= 108; $i += 1, $foolink += 12) {
+      print "<li style='display:inline; margin-right:20px;'><a href='/boca-chica-photos2.php?page="; 
+        print $foolink;  
+      print "'>" . $i . "</a></li>";
+    } 
+    echo "</ul></div>";
+    /* end script */
 		echo "<div class='textphoto'>" . PHP_EOL;
     	while ($row = mysql_fetch_array($result)) {
 			echo "<a href='" . $row[link] . "' rel='prettyPhoto[tanzania]' title='" . $row[title] . "'><img src='" . $row[link] . "' alt='" . $row[alt] . "' class='" . $row[css_class] . "' /></a>" . PHP_EOL;				
@@ -142,7 +151,7 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
       echo "<div class='nextholder'><a href='". $nexturl .="page=" . $nex . "' style='margin-left:20px;'>Next</a></div></div>" . PHP_EOL;
     }
     /* begin script */
-    echo "<div style='clear:both;'><ul style='list-style:none; display:inline;'>";
+    echo "<div style='width:275px; margin:0 auto;'><ul style='list-style:none; display:inline;'>";
     // simultaneous loop through two variables
     for ($i = 1, $foolink = 0; $i < $totalPages + 1, $foolink <= 108; $i += 1, $foolink += 12) {
       print "<li style='display:inline; margin-right:20px;'><a href='/boca-chica-photos2.php?page="; 
