@@ -44,17 +44,17 @@ src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 <?php
 $page = $_GET['page'];
 $row_count = 0;
-function getPics ($location, $table, $alt, $page) {
+function getPics ($location, $table, $page) {
   if ($_GET['location']==$location) {
-    $result = mysql_query ("SELECT SQL_CALC_FOUND_ROWS * FROM $table WHERE alt='$alt' ORDER BY link ASC LIMIT $page, 12"); // Run the query.
+    //$result = mysql_query ("SELECT SQL_CALC_FOUND_ROWS * FROM $table ORDER BY link ASC LIMIT $page, 12"); // Run the query.
+    $result = mysql_query ("SELECT SQL_CALC_FOUND_ROWS * FROM haitiTbl ORDER BY link ASC LIMIT $page, 12"); // Run the query.
     $countData = mysql_fetch_assoc(mysql_query("SELECT found_rows() AS total"));
   	$totalRows = $countData['total'];
   	if ($result) {
   		echo "<div class='textphoto'>" . PHP_EOL;
       	while ($row = mysql_fetch_array($result)) {
-  			echo "<a href='" . $row[link] . "' rel='prettyPhoto[tanzania]' title='" . $row[title] . "'><img src='" . $row[link] . "' alt='" . $row[alt] . "' class='" . $row[css_class] . "' /></a>" . PHP_EOL;				
+  			echo "<a href='" . $row[link] . "' rel='prettyPhoto[tanzania]' title='" . $row[caption] . "'><img src='" . $row[link] . "' alt='" . $row[alt] . "' class='" . $row[css_class] . "' /></a>" . PHP_EOL;				
   			$row_count++;
-  			echo $row_count;
         if (($row_count %4==0)&&($row_count %12!=0)) {
   			 echo "</div><div class='textphoto'>";
   			} elseif (($row_count %4==0)&&($row_count %12==0)) { 
@@ -66,9 +66,9 @@ function getPics ($location, $table, $alt, $page) {
   }
 }
 
-getPics('boca-chica','bocachica2008','Boca Chica, Dominican Republic', $page);
+getPics('boca-chica','bocachica2008',$page);
 getPics('nairobi-arboretum', 'nairobi-table', 'nairobi, kenya', $page);
-getPics('haiti', 'haitiTbl', 'Remembering Pre Earthquake Haiti', $page);
+getPics('pre-earthquake-haiti','haitiTbl',$page);
 
 echo "</div>";// end div right
 include ("common/footer.php");
