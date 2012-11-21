@@ -1,0 +1,8 @@
+INSERT INTO `haitiTbl` (link, caption, alt) VALUES 
+('/travel-photos/images-haiti/pre-earthquake-haiti-la-plaine-haiti-children-IMGA0288.jpg', 'This young boy in La Plaine, Haiti was deaf and could not speak. He was always happy. Saw him several times and was always smiling.', 'The children of La Plaine, Haiti.'),
+('/travel-photos/images-haiti/pre-earthquake-haiti-la-plaine-haiti-children-infants-at-home.jpg', 'The children of La Plaine, Haiti.', 'The children of La Plaine, Haiti.'),
+('/travel-photos/images-haiti/pre-earthquake-haiti-la-plaine-haiti-children-school-girls.jpg', 'The children of La Plaine, Haiti.', 'The children of La Plaine, Haiti.'),
+('/travel-photos/images-haiti/pre-earthquake-haiti-la-plaine-haiti-detente-tropicale-hotel-ginette-sylvain-IMGA0263.jpg', 'Ginette Sylvain poses on the balcony of the Detente Tropicale Hotel in La Plaine, Haiti.', 'Ginette Sylvain poses on the balcony of the Detente Tropicale Hotel in La Plaine, Haiti.'),
+('/travel-photos/images-haiti/pre-earthquake-haiti-la-plaine-haiti-detente-tropicale-hotel-ginette-sylvain-IMGA0264.jpg', 'Ginette Sylvain poses on the balcony of the Detente Tropicale Hotel in La Plaine, Haiti.', 'Ginette Sylvain poses on the balcony of the Detente Tropicale Hotel in La Plaine, Haiti.'),
+('/travel-photos/images-haiti/pre-earthquake-haiti-la-plaine-haiti-djouvensong-sylvain-IMGA0157.jpg', 'Ginettes brother Djouvensong, poses for the camera (2003).', 'Ginettes brother Djouvensong, poses for the camera (2003).'),
+('/travel-photos/images-haiti/pre-earthquake-haiti-la-plaine-haiti-djouvensongs-car-IMGA0168.jpg', 'Djouvensongs car in La Plaine, Haiti.', 'Djouvensongs car in La Plaine, Haiti.')
